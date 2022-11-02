@@ -1,0 +1,80 @@
+.auth-form
+    justify-content: space-between
+
+    &__line
+        padding: 0 .0625rem
+        background: $primary-color
+        z-index: 10
+
+    .log-in
+        align-items: flex-start
+
+    .sign-up
+        align-items: flex-end
+
+    .log-in, .sign-up
+        transition: all .3s
+        overflow: hidden
+        width: 15%
+
+        .form
+            opacity: .5
+            z-index: -1
+
+        &.active
+            width: 85%
+
+            .form
+                opacity: 1
+                z-index: 10
+
+            .toggler
+                color: $primary-color
+
+        &__toggle
+            width: 9rem
+            justify-content: space-between
+            align-items: center
+            padding: .625rem 0
+            background: transparent
+            color: #fff
+            font-size: 1.125rem
+            border: none
+            transition: inherit
+
+            &>span
+                line-height: 1.125rem
+                font-weight: 600
+
+            &:hover
+                color: $primary-color
+
+        &__field
+            background: #fff
+            align-items: center
+            color: #0000006f
+
+        &__input
+            margin-left: .5rem
+            outline: none
+            border: none
+            font-size: 1rem
+
+
+        &__field, &__submit
+            margin-top: 1rem
+            border-radius: 3.75rem
+            width: 18rem
+            padding: .625rem 1rem
+
+    .submit
+        background: transparent
+        color: #fff
+        border: .0625rem solid $primary-color
+        outline: none
+        font-size: 1.125rem
+        transition: all .3s
+
+        &:hover
+            background: $primary-color
+

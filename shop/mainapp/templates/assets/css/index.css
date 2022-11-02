@@ -3,7 +3,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font: 1rem "Mazzard M", sans-serif;
+  font-family: "Mazzard M", sans-serif;
 }
 
 html {
@@ -15,6 +15,7 @@ html {
 body {
   height: 100%;
   max-width: 71.25rem;
+  padding: 0 1rem;
   margin: auto;
 }
 
@@ -28,13 +29,21 @@ body {
   flex-direction: column;
 }
 
+.w-100 {
+  width: 100%;
+}
+
 button, a {
   cursor: pointer;
   text-decoration: none;
 }
 
+main {
+  padding: 2rem 0;
+}
+
 header {
-  padding: 2.5rem 0;
+  padding: 2rem 0;
 }
 header .navigation {
   justify-content: space-between;
@@ -46,11 +55,104 @@ header .navigation__logo-large {
 header .navigation__menu-link {
   color: #f1f1f1;
   padding: 1rem;
-  border-radius: 0.5rem;
   transition: all 0.3s;
 }
+header .navigation__menu-link:last-child {
+  padding-right: 0;
+}
+header .navigation__menu-link span {
+  margin-left: 0.375rem;
+}
 header .navigation__menu-link:hover {
-  background: #0f0f0f;
+  color: #5470f0;
+}
+header .navigation__menu-link.exit:hover {
+  color: #ff5290;
+}
+
+@media (max-device-width: 720px) {
+  a > span {
+    display: none;
+  }
+}
+.auth-form {
+  justify-content: space-between;
+}
+.auth-form__line {
+  padding: 0 0.0625rem;
+  background: #5470f0;
+  z-index: 10;
+}
+.auth-form .log-in {
+  align-items: flex-start;
+}
+.auth-form .sign-up {
+  align-items: flex-end;
+}
+.auth-form .log-in, .auth-form .sign-up {
+  transition: all 0.3s;
+  overflow: hidden;
+  width: 15%;
+}
+.auth-form .log-in .form, .auth-form .sign-up .form {
+  opacity: 0.5;
+  z-index: -1;
+}
+.auth-form .log-in.active, .auth-form .sign-up.active {
+  width: 85%;
+}
+.auth-form .log-in.active .form, .auth-form .sign-up.active .form {
+  opacity: 1;
+  z-index: 10;
+}
+.auth-form .log-in.active .toggler, .auth-form .sign-up.active .toggler {
+  color: #5470f0;
+}
+.auth-form .log-in__toggle, .auth-form .sign-up__toggle {
+  width: 9rem;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.625rem 0;
+  background: transparent;
+  color: #fff;
+  font-size: 1.125rem;
+  border: none;
+  transition: inherit;
+}
+.auth-form .log-in__toggle > span, .auth-form .sign-up__toggle > span {
+  line-height: 1.125rem;
+  font-weight: 600;
+}
+.auth-form .log-in__toggle:hover, .auth-form .sign-up__toggle:hover {
+  color: #5470f0;
+}
+.auth-form .log-in__field, .auth-form .sign-up__field {
+  background: #fff;
+  align-items: center;
+  color: rgba(0, 0, 0, 0.4352941176);
+}
+.auth-form .log-in__input, .auth-form .sign-up__input {
+  margin-left: 0.5rem;
+  outline: none;
+  border: none;
+  font-size: 1rem;
+}
+.auth-form .log-in__field, .auth-form .log-in__submit, .auth-form .sign-up__field, .auth-form .sign-up__submit {
+  margin-top: 1rem;
+  border-radius: 3.75rem;
+  width: 18rem;
+  padding: 0.625rem 1rem;
+}
+.auth-form .submit {
+  background: transparent;
+  color: #fff;
+  border: 0.0625rem solid #5470f0;
+  outline: none;
+  font-size: 1.125rem;
+  transition: all 0.3s;
+}
+.auth-form .submit:hover {
+  background: #5470f0;
 }
 
 /*# sourceMappingURL=index.css.map */

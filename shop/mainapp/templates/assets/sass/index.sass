@@ -1,8 +1,11 @@
+$primary-color: #5470f0
+$dangerous-color: #ff5290
+
 *
     margin: 0
     padding: 0
     box-sizing: border-box
-    font: 1rem "Mazzard M", sans-serif
+    font-family: "Mazzard M", sans-serif
 
 html
     width: 100%
@@ -12,6 +15,7 @@ html
 body
     height: 100%
     max-width: 71.25rem
+    padding: 0 1rem
     margin: auto
 
 .row
@@ -22,9 +26,17 @@ body
     display: flex
     flex-direction: column
 
+.w-100
+    width: 100%
+
 button, a
     cursor: pointer
     text-decoration: none
 
-@import "_header.sass"
+main
+    padding: 2rem 0
+
 @import "../fonts/Mazzart/stylesheet.css"
+@import "_header.sass"
+@import "_adaptive.sass"
+@import "_auth.sass"

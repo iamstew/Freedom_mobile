@@ -4,6 +4,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" type="text/css" href="assets/css/index.css">
+	<script src="https://kit.fontawesome.com/060207939c.js" crossorigin="anonymous"></script>
 	<title>Авторизация</title>
 </head>
 <body>
@@ -11,16 +12,55 @@
 		<nav class="navigation row">
 			<a href="#" class="navigation__logo">
 				<img src="assets/img/freedom-mobile-low-resolution-logo-color-on-transparent-background.png" alt="Логотип" class="navigation__logo-large">
-				<!-- <img src="img/freedom-mobile-logo.png" alt="" class="navigation__logo-small"> -->
 			</a>
 			<div class="navigation__menu">
-				<a href="#" class="navigation__menu-link">Каталог</a>
-				<a href="#" class="navigation__menu-link">Корзина</a>
-				<a href="#" class="navigation__menu-link">Личный кабинет</a>
+				<a href="#" class="navigation__menu-link"><i class="fa-solid fa-store"></i><span>Каталог</span></a>
+				<a href="#" class="navigation__menu-link"><i class="fa-solid fa-cart-shopping"></i><span>Корзина</span></a>
+				<a href="#" class="navigation__menu-link"><i class="fa-solid fa-user"></i><span>Личный кабинет</span></a>
+				<a href="#" class="navigation__menu-link exit"><i class="fa-solid fa-right-from-bracket"></i><span>Выход</span></a>
 			</div>
 		</nav>
 	</header>
-	<main></main>
+	<main class="auth-form row w-100">
+		<section class="log-in column">
+			<button class="log-in__toggle toggler row" onclick="toggleForm(event)"><span>Авторизация</span><i class="fa-solid fa-right-to-bracket"></i></button>
+			<div class="log-in__form form">
+				<span class="log-in__field row">
+					<i class="fa-solid fa-envelope"></i>
+					<input type="email" placeholder="Почта" required class="log-in__input">
+				</span>
+				<span class="log-in__field row">
+					<i class="fa-solid fa-key"></i>
+					<input type="password" placeholder="Пароль" required class="log-in__input">
+				</span>
+				<button class="log-in__submit submit">Войти</button>
+			</div>
+		</section>
+		<span class="auth-form__line"></span>
+		<section class="sign-up column active">
+			<button class="sign-up__toggle toggler row" onclick="toggleForm(event)"><i class="fa-solid fa-user-plus"></i><span>Регистрация</span></button>
+			<div class="log-in__form form">
+				<span class="log-in__field row">
+					<i class="fa-solid fa-user"></i>
+					<input type="text" placeholder="Имя" required class="log-in__input">
+				</span>
+				<span class="log-in__field row">
+					<i class="fa-solid fa-phone"></i>
+					<input type="phone" placeholder="Телефон" required class="log-in__input">
+				</span>
+				<span class="log-in__field row">
+					<i class="fa-solid fa-envelope"></i>
+					<input type="email" placeholder="Почта" required class="log-in__input">
+				</span>
+				<span class="log-in__field row">
+					<i class="fa-solid fa-key"></i>
+					<input type="password" placeholder="Пароль" required class="log-in__input">
+				</span>
+				<button class="log-in__submit submit">Зарегестрироваться</button>
+			</div>
+		</section>
+	</main>
 	<footer></footer>
+	<script type="text/javascript" src="assets/js/main.js"></script>
 </body>
 </html>

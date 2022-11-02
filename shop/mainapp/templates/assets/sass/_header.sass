@@ -1,5 +1,5 @@
 header
-    padding: 2.5rem 0
+    padding: 2rem 0
 
     .navigation
         justify-content: space-between
@@ -15,8 +15,17 @@ header
             &-link
                 color: #f1f1f1
                 padding: 1rem
-                border-radius: .5rem
                 transition: all .3s
 
+                &:last-child
+                    padding-right: 0
+
+                span
+                    margin-left: .375rem
+
                 &:hover
-                    background: #0f0f0f
+                    color: $primary-color
+
+
+                &.exit:hover
+                    color: $dangerous-color
