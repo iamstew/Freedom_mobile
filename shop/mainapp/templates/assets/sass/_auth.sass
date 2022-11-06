@@ -1,5 +1,51 @@
 .auth-form
-    justify-content: space-between
+    align-items: center
+
+    .active-thumb
+        position: absolute
+        top: 0
+        left: 0
+        width: 50%
+        height: 100%
+        padding: .625rem 1rem
+        border-radius: 3.75rem
+        // border: .125rem solid $primary-color
+        background: $primary-color
+        transition: all .3s
+        z-index: 2
+
+    &__buttons-group
+        position: relative
+        border-radius: 3.75rem
+        justify-self: center
+        background: #transparent
+        border: .0625rem solid $primary-color
+        padding: .625rem 1rem
+        margin: auto
+
+        .toggler
+            width: 11rem
+            justify-content: space-between
+            align-items: center
+            padding: .625rem 1rem
+            background: transparent
+            color: #fff
+            font-size: 1.125rem
+            border: none
+            transition: all .3s
+            z-index: 10
+
+            &>span
+                line-height: 1.125rem
+                font-weight: 600
+
+    &__section
+        position: relative
+        transition: all 1s
+        justify-content: center
+        margin-top: 2rem
+        width: 36rem
+        overflow: hidden
 
     &__line
         padding: 0 .0625rem
@@ -7,54 +53,33 @@
         z-index: 10
 
     .log-in
-        align-items: flex-start
-
-    .sign-up
-        align-items: flex-end
-
-    .log-in, .sign-up
-        transition: all .3s
-        overflow: hidden
-        width: 15%
-
-        .form
-            opacity: .5
-            z-index: -1
+        left: -50%
 
         &.active
-            width: 85%
+            left: 25%
 
-            .form
-                opacity: 1
-                z-index: 10
+    .sign-up
+        right: -50%
 
-            .toggler
-                color: $primary-color
+        &.active
+            right: 25%
 
-        &__toggle
-            width: 9rem
-            justify-content: space-between
-            align-items: center
-            padding: .625rem 0
-            background: transparent
-            color: #fff
-            font-size: 1.125rem
-            border: none
-            transition: inherit
+    .log-in, .sign-up
+        position: relative
+        transition: all .3s
+        overflow: hidden
+        width: 18rem
+        align-items: center
 
-            &>span
-                line-height: 1.125rem
-                font-weight: 600
-
-            &:hover
-                color: $primary-color
 
         &__field
+            width: 100%
             background: #fff
             align-items: center
             color: #0000006f
 
         &__input
+            width: 18rem
             margin-left: .5rem
             outline: none
             border: none
@@ -66,6 +91,7 @@
             border-radius: 3.75rem
             width: 18rem
             padding: .625rem 1rem
+            font-size: 1.125rem
 
     .submit
         background: transparent

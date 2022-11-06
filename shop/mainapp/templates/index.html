@@ -8,23 +8,29 @@
 	<title>Авторизация</title>
 </head>
 <body>
+	<div class="shadow-top-left"></div>
+	<div class="shadow-bottom"></div>
 	<header>
 		<nav class="navigation row">
-			<a href="#" class="navigation__logo">
+			<a href="#" class="navigation__logo row">
 				<img src="assets/img/freedom-mobile-low-resolution-logo-color-on-transparent-background.png" alt="Логотип" class="navigation__logo-large">
 			</a>
 			<div class="navigation__menu">
 				<a href="#" class="navigation__menu-link"><i class="fa-solid fa-store"></i><span>Каталог</span></a>
 				<a href="#" class="navigation__menu-link"><i class="fa-solid fa-cart-shopping"></i><span>Корзина</span></a>
-				<a href="#" class="navigation__menu-link"><i class="fa-solid fa-user"></i><span>Личный кабинет</span></a>
+				<a href="#" class="navigation__menu-link"><i class="fa-solid fa-circle-user"></i><span>Личный кабинет</span></a>
 				<a href="#" class="navigation__menu-link exit"><i class="fa-solid fa-right-from-bracket"></i><span>Выход</span></a>
 			</div>
 		</nav>
 	</header>
-	<main class="auth-form row w-100">
-		<section class="log-in column">
-			<button class="log-in__toggle toggler row" onclick="toggleForm(event)"><span>Авторизация</span><i class="fa-solid fa-right-to-bracket"></i></button>
-			<div class="log-in__form form">
+	<main class="auth-form column w-100">
+		<div class="auth-form__buttons-group row">
+			<span class="active-thumb"></span>
+			<button class="log-in__toggle toggler row active" onclick="toggleForm(event)" data-button="log-in"><span>Авторизация</span><i class="fa-solid fa-right-to-bracket"></i></button>
+			<button class="sign-up__toggle toggler row" onclick="toggleForm(event)" data-button="sign-up"><i class="fa-solid fa-user-plus"></i><span>Регистрация</span></button>
+		</div>
+		<section class="auth-form__section row">
+			<div class="log-in active column">
 				<span class="log-in__field row">
 					<i class="fa-solid fa-envelope"></i>
 					<input type="email" placeholder="Почта" required class="log-in__input">
@@ -35,11 +41,7 @@
 				</span>
 				<button class="log-in__submit submit">Войти</button>
 			</div>
-		</section>
-		<span class="auth-form__line"></span>
-		<section class="sign-up column active">
-			<button class="sign-up__toggle toggler row" onclick="toggleForm(event)"><i class="fa-solid fa-user-plus"></i><span>Регистрация</span></button>
-			<div class="log-in__form form">
+			<div class="sign-up column">
 				<span class="log-in__field row">
 					<i class="fa-solid fa-user"></i>
 					<input type="text" placeholder="Имя" required class="log-in__input">
@@ -56,7 +58,7 @@
 					<i class="fa-solid fa-key"></i>
 					<input type="password" placeholder="Пароль" required class="log-in__input">
 				</span>
-				<button class="log-in__submit submit">Зарегестрироваться</button>
+				<button class="sign-up__submit submit">Зарегестрироваться</button>
 			</div>
 		</section>
 	</main>

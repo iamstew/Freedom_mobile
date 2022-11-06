@@ -1,3 +1,45 @@
-@media (max-device-width: 720px)
-    a>span
+@media (max-device-width: 1140px)
+    .shadow-top-left
+        box-shadow: 15rem 15rem 30rem $primary-color
+    .shadow-bottom
+        box-shadow: -1vh 0 25rem $primary-color
+
+
+@media (max-device-width: 1024px)
+
+@media (max-device-width: 768px)
+    .navigation
+        &__menu
+            &-link>span
+                display: none
+
+@media (max-device-width: 480px)
+    .shadow-top-left, .shadow-bottom
         display: none
+
+    header
+        .navigation
+
+            &__logo
+                align-items: center
+                &-large
+                    width: 8rem
+
+            &__menu
+                &-link
+                    padding: .5rem
+                    font-size: 1rem
+
+    .auth-form
+
+        &__buttons-group
+            width: 100%
+            justify-content: space-between
+
+            .toggler
+                padding: 0
+                justify-content: center
+                width: calc(50% - 1rem)
+
+                &>span
+                    display: none
