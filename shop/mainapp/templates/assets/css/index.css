@@ -56,20 +56,27 @@ header .navigation__logo-large {
 }
 header .navigation__menu-link {
   color: #f1f1f1;
-  padding: 1rem;
+  padding: 0.625rem 1rem;
   transition: all 0.3s;
+  border: 2px solid transparent;
+  border-radius: 2rem;
+  font-size: 1.125rem;
+  font-weight: 500;
 }
-header .navigation__menu-link:last-child {
-  padding-right: 0;
-}
-header .navigation__menu-link span {
+header .navigation__menu-link p {
   margin-left: 0.375rem;
+  vertical-align: text-bottom;
+}
+header .navigation__menu-link i {
+  font-size: 1.125rem;
 }
 header .navigation__menu-link:hover {
+  border: 2px solid #5470f0;
   color: #5470f0;
 }
 header .navigation__menu-link.exit:hover {
   color: #ff5290;
+  border: 2px solid #ff5290;
 }
 
 .auth-form {
@@ -82,10 +89,14 @@ header .navigation__menu-link.exit:hover {
   width: 50%;
   height: 100%;
   padding: 0.625rem 1rem;
-  border-radius: 3.75rem;
+  border-radius: 3.75rem 0 0 3.75rem;
   background: #5470f0;
   transition: all 0.3s;
   z-index: 2;
+}
+.auth-form .active-thumb.right {
+  transform: translateX(100%);
+  border-radius: 0 3.75rem 3.75rem 0;
 }
 .auth-form__buttons-group {
   position: relative;
@@ -180,8 +191,8 @@ header .navigation__menu-link.exit:hover {
   position: absolute;
   width: 20rem;
   height: 20rem;
-  top: -30rem;
-  left: -30rem;
+  top: -35rem;
+  left: -35rem;
   z-index: 100;
   border-radius: 50%;
   box-shadow: 20rem 20rem 30rem #5470f0;
@@ -195,20 +206,18 @@ header .navigation__menu-link.exit:hover {
   right: -100vh;
   border-radius: 50%;
   z-index: 100;
-  box-shadow: -20vh 0 25rem #5470f0;
+  box-shadow: -1vw 0 25rem #5470f0;
 }
 
-@media (max-device-width: 1140px) {
-  .shadow-top-left {
-    box-shadow: 15rem 15rem 30rem #5470f0;
-  }
-  .shadow-bottom {
-    box-shadow: -1vh 0 25rem #5470f0;
-  }
-}
 @media (max-device-width: 768px) {
-  .navigation__menu-link > span {
+  header .navigation__menu-link {
+    padding: 0.5rem;
+  }
+  header .navigation__menu-link p {
     display: none;
+  }
+  header .navigation__menu-link i {
+    font-size: 1.25rem;
   }
 }
 @media (max-device-width: 480px) {

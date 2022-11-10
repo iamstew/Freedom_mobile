@@ -14,18 +14,20 @@ header
 
             &-link
                 color: #f1f1f1
-                padding: 1rem
+                padding: .625rem 1rem
                 transition: all .3s
-
-                &:last-child
-                    padding-right: 0
-
-                span
+                border: 2px solid transparent
+                border-radius: 2rem
+                font-size: 1.125rem
+                font-weight: 500
+                p
                     margin-left: .375rem
-
+                    vertical-align: text-bottom
+                i
+                    font-size: 1.125rem
                 &:hover
+                    border: 2px solid $primary-color
                     color: $primary-color
-
-
                 &.exit:hover
                     color: $dangerous-color
+                    border: 2px solid $dangerous-color

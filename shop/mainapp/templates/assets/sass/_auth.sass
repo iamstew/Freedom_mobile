@@ -8,11 +8,14 @@
         width: 50%
         height: 100%
         padding: .625rem 1rem
-        border-radius: 3.75rem
-        // border: .125rem solid $primary-color
+        border-radius: 3.75rem 0 0 3.75rem
         background: $primary-color
         transition: all .3s
         z-index: 2
+
+        &.right
+            transform: translateX(100%)
+            border-radius: 0 3.75rem 3.75rem 0
 
     &__buttons-group
         position: relative
