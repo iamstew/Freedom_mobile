@@ -7,10 +7,10 @@ function toggleForm(event){
 	if (data === "log-in"){
 		signUp.classList.remove("active")
 		logIn.classList.add("active")
-		thumb.classList.toggle("right")
+		thumb.classList.remove("right")
 	}else if (data === "sign-up"){
 		signUp.classList.add("active")
 		logIn.classList.remove("active")
-		thumb.classList.toggle("right")
+		thumb.classList.add("right")
 	}
 }
