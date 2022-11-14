@@ -1,0 +1,108 @@
+.auth-form
+    align-items: center
+
+    .active-thumb
+        position: absolute
+        top: 0
+        left: 0
+        width: 50%
+        height: 100%
+        padding: .625rem 1rem
+        border-radius: 3.75rem 0 0 3.75rem
+        background: $primary-gradient
+        transition: all .3s
+        z-index: 2
+
+        &.right
+            transform: translateX(100%)
+            border-radius: 0 3.75rem 3.75rem 0
+
+    &__buttons-group
+        position: relative
+        border-radius: 3.75rem
+        justify-self: center
+        background: transparent
+        border: .0625rem solid $primary-color
+        padding: .625rem 1rem
+
+        .toggler
+            width: 11rem
+            justify-content: space-between
+            align-items: center
+            padding: .625rem 1rem
+            background: transparent
+            color: #fff
+            font-size: 1.125rem
+            border: none
+            @include transition(.3s)
+            z-index: 10
+
+            &>span
+                line-height: 1.125rem
+                font-weight: 600
+
+    &__section
+        position: relative
+        @include transition(1s)
+        justify-content: center
+        margin-top: 2rem
+        width: 36rem
+        overflow: hidden
+
+    &__line
+        padding: 0 .0625rem
+        background: $primary-color
+        z-index: 10
+
+    .log-in
+        left: -50%
+
+        &.active
+            left: 25%
+
+    .sign-up
+        right: -50%
+
+        &.active
+            right: 25%
+
+    .log-in, .sign-up
+        position: relative
+        @include transition(.3s)
+        overflow: hidden
+        width: 18rem
+        align-items: center
+
+
+        &__field
+            width: 100%
+            background: #fff
+            align-items: center
+            color: #0000006f
+            height: 3rem
+            // font-size: 2rem
+
+        &__input
+            width: 18rem
+            margin-left: .5rem
+            outline: none
+            border: none
+            font-size: 1.125rem
+
+
+        &__field, &__submit
+            margin-top: 1rem
+            border-radius: 3.75rem
+            width: 18rem
+            padding: .625rem 1rem
+            font-size: 1.125rem
+
+    .submit
+        background-image: $primary-gradient
+        color: #fff
+        border: .0625rem solid $primary-color
+        outline: none
+        font-size: 1.125rem
+        height: 3rem
+        @include transition(.3s)
+      

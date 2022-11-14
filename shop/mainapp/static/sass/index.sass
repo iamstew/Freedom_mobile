@@ -1,0 +1,63 @@
+$primary-color: #5470f0
+$primary-gradient: linear-gradient(122.93deg, #7345D3 -137.34%, #5470F0 38.32%, #1858CD 129.02%)
+$dangerous-color: #ff5290
+
+@mixin transition($time)
+    -webkit-transition: all $time
+    -moz-transition: all $time
+    -ms-transition: all $time
+    -o-transition: all $time
+    transition: all $time
+
+*
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+    font-family: "Mazzard M", sans-serif
+
+html
+    width: 100%
+    height: 100%
+    background: linear-gradient(180deg, #040114 0%, #07032B 100%)
+    background-attachment: fixed
+
+body
+    display: flex
+    flex-direction: column
+    height: 100%
+    width: 100%
+
+.row
+    display: flex
+    flex-direction: row
+
+.column
+    display: flex
+    flex-direction: column
+
+.w-100
+    width: 100%
+
+.wrap
+    width: 100%
+    max-width: 71.25rem
+    margin: 0 auto
+
+button, a
+    cursor: pointer
+    text-decoration: none
+
+main
+    flex: 1 0 auto
+    padding: 2rem 0
+
+footer
+    flex: 0 0 auto
+
+@import "../fonts/Mazzart/stylesheet.css"
+@import "_header.sass"
+@import "_auth.sass"
+@import "_shadows.sass"
+@import "_footer.sass"
+
+@import "_adaptive.sass"

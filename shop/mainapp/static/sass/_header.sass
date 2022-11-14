@@ -1,0 +1,31 @@
+header
+    padding: 2rem 0
+
+    .navigation
+        justify-content: space-between
+        align-items: center
+
+        &__logo
+            width: 12rem
+
+        &__menu
+
+            &-link
+                color: #f1f1f1
+                padding: .625rem 1rem
+                @include transition(.3s)
+                border: 2px solid transparent
+                border-radius: 2rem
+                font-size: 1.125rem
+                font-weight: 500
+                p
+                    margin-left: .375rem
+                    vertical-align: text-bottom
+                i
+                    font-size: 1.125rem
+                &:hover
+                    border: 2px solid $primary-color
+                    color: $primary-color
+                &.exit:hover
+                    color: $dangerous-color
+                    border: 2px solid $dangerous-color
