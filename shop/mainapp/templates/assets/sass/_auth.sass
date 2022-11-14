@@ -9,7 +9,7 @@
         height: 100%
         padding: .625rem 1rem
         border-radius: 3.75rem 0 0 3.75rem
-        background: $primary-color
+        background: $primary-gradient
         transition: all .3s
         z-index: 2
 
@@ -21,10 +21,9 @@
         position: relative
         border-radius: 3.75rem
         justify-self: center
-        background: #transparent
+        background: transparent
         border: .0625rem solid $primary-color
         padding: .625rem 1rem
-        margin: auto
 
         .toggler
             width: 11rem
@@ -35,7 +34,7 @@
             color: #fff
             font-size: 1.125rem
             border: none
-            transition: all .3s
+            @include transition(.3s)
             z-index: 10
 
             &>span
@@ -44,7 +43,7 @@
 
     &__section
         position: relative
-        transition: all 1s
+        @include transition(1s)
         justify-content: center
         margin-top: 2rem
         width: 36rem
@@ -69,7 +68,7 @@
 
     .log-in, .sign-up
         position: relative
-        transition: all .3s
+        @include transition(.3s)
         overflow: hidden
         width: 18rem
         align-items: center
@@ -80,13 +79,15 @@
             background: #fff
             align-items: center
             color: #0000006f
+            height: 3rem
+            // font-size: 2rem
 
         &__input
             width: 18rem
             margin-left: .5rem
             outline: none
             border: none
-            font-size: 1rem
+            font-size: 1.125rem
 
 
         &__field, &__submit
@@ -97,13 +98,11 @@
             font-size: 1.125rem
 
     .submit
-        background: transparent
+        background-image: $primary-gradient
         color: #fff
         border: .0625rem solid $primary-color
         outline: none
         font-size: 1.125rem
-        transition: all .3s
-
-        &:hover
-            background: $primary-color
-
+        height: 3rem
+        @include transition(.3s)
+      
