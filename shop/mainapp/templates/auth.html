@@ -13,7 +13,8 @@
 	<header>
 		<nav class="navigation wrap row">
 			<a href="home.html" class="navigation__logo row">
-				<img src="../static/img/freedom-mobile-low-resolution-logo-color-on-transparent-background.png" alt="Freedom Mobile"  class="navigation__logo">
+				<img src="../static/img/logo-large.svg" alt="Freedom Mobile"  class="navigation__logo-large">
+				<img src="../static/img/logo-small.svg" alt="Freedom Mobile"  class="navigation__logo-small">
 			</a>
 			<div class="navigation__menu row">
 				<a href="#" class="navigation__menu-link row"><i class="fa-solid fa-store"></i><p>Каталог</p></a>
@@ -23,49 +24,51 @@
 			</div>
 		</nav>
 	</header>
-	<main class="auth-form wrap column w-100">
-		<div class="auth-form__buttons-group row">
-			<span class="active-thumb"></span>
-			<button class="log-in__toggle toggler row active" onclick="toggleForm(event)" data-button="log-in"><span>Авторизация</span><i class="fa-solid fa-right-to-bracket"></i></button>
-			<button class="sign-up__toggle toggler row" onclick="toggleForm(event)" data-button="sign-up"><i class="fa-solid fa-user-plus"></i><span>Регистрация</span></button>
+	<main>
+		<div class="auth-form wrap column w-100">
+			<div class="auth-form__buttons-group row">
+				<span class="active-thumb"></span>
+				<button class="log-in__toggle toggler row active" onclick="toggleForm(event)" data-button="log-in"><span>Авторизация</span><i class="fa-solid fa-right-to-bracket"></i></button>
+				<button class="sign-up__toggle toggler row" onclick="toggleForm(event)" data-button="sign-up"><i class="fa-solid fa-user-plus"></i><span>Регистрация</span></button>
+			</div>
+			<section class="auth-form__section row">
+				<div class="log-in active column">
+					<label class="log-in__field row">
+						<i class="fa-solid fa-envelope"></i>
+						<input type="email" placeholder="Почта" required class="log-in__input">
+					</label>
+					<label class="log-in__field row">
+						<i class="fa-solid fa-key"></i>
+						<input type="password" placeholder="Пароль" required class="log-in__input">
+					</label>
+					<button class="log-in__submit submit" type="submit" data-auth="log-in" onclick="submit(event)">Войти</button>
+				</div>
+				<div class="sign-up column">
+					<label class="sign-up__field row">
+						<i class="fa-solid fa-user"></i>
+						<input type="text" placeholder="Имя" required class="sign-up__input">
+					</label>
+					<label class="sign-up__field row">
+						<i class="fa-solid fa-phone"></i>
+						<input type="phone" placeholder="Телефон" required class="sign-up__input">
+					</label>
+					<label class="sign-up__field row">
+						<i class="fa-solid fa-envelope"></i>
+						<input type="email" placeholder="Почта" required class="sign-up__input">
+					</label>
+					<label class="sign-up__field row">
+						<i class="fa-solid fa-key"></i>
+						<input type="password" placeholder="Пароль" required class="sign-up__input">
+					</label>
+					<button class="sign-up__submit submit" type="submit" data-auth="sign-up" onclick="submit(event)">Зарегестрироваться</button>
+				</div>
+			</section>
 		</div>
-		<section class="auth-form__section row">
-			<div class="log-in active column">
-				<span class="log-in__field row">
-					<i class="fa-solid fa-envelope"></i>
-					<input type="email" placeholder="Почта" required class="log-in__input">
-				</span>
-				<span class="log-in__field row">
-					<i class="fa-solid fa-key"></i>
-					<input type="password" placeholder="Пароль" required class="log-in__input">
-				</span>
-				<button class="log-in__submit submit">Войти</button>
-			</div>
-			<div class="sign-up column">
-				<span class="log-in__field row">
-					<i class="fa-solid fa-user"></i>
-					<input type="text" placeholder="Имя" required class="log-in__input">
-				</span>
-				<span class="log-in__field row">
-					<i class="fa-solid fa-phone"></i>
-					<input type="phone" placeholder="Телефон" required class="log-in__input">
-				</span>
-				<span class="log-in__field row">
-					<i class="fa-solid fa-envelope"></i>
-					<input type="email" placeholder="Почта" required class="log-in__input">
-				</span>
-				<span class="log-in__field row">
-					<i class="fa-solid fa-key"></i>
-					<input type="password" placeholder="Пароль" required class="log-in__input">
-				</span>
-				<button class="sign-up__submit submit">Зарегестрироваться</button>
-			</div>
-		</section>
 	</main>
 	<footer class="column">
 		<div class="wrap row">
 			<div class="logo column">
-				<img src="../static/img/freedom-mobile-low-resolution-logo-color-on-transparent-background.png" class="logo__image">
+				<img src="../static/img/logo-large.svg" class="logo__image">
 				<div class="payment row">
 					<span class="payment__service">
 						<i class="fa-brands fa-cc-visa"></i>
@@ -136,5 +139,6 @@
 		</div>
 	</footer>
 	<script type="text/javascript" src="../static/js/main.js"></script>
+	<script type="text/javascript" src="../static/js/submit.js"></script>
 </body>
 </html>

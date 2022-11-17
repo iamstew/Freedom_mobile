@@ -1,41 +1,83 @@
 @media (max-device-width: 768px)
     header
         .navigation
+            &__logo
+                &-large
+                    width: 10rem
+
             &__menu
+                width: 40%
+                justify-content: space-between
                 &-link
                     padding: .5rem
                     p
                         display: none
                     i
                         font-size: 1.25rem
+    
+    main
+        .home
+            &__image
+                display: none
 
 @media (max-device-width: 480px)
     .shadow-top-left, .shadow-bottom
         display: none
 
     header
-        .navigation
+        justify-content: flex-start 
+        position: fixed
+        padding: .325rem 0
+        top: 0
+        z-index: 50
+        background: rgba(0, 0, 0, 0.5)
+        backdrop-filter: blur(.5rem)
 
+        .navigation
+            width: 100%
             &__logo
-                align-items: center
+                
                 &-large
-                    width: 8rem
+                    display: none
+                &-small
+                    display: block
 
             &__menu
+                width: 80%
+                justify-content: space-around
                 &-link
+                    border: none !important
                     padding: .5rem
                     font-size: 1rem
 
-    .auth-form
+    main
+        margin-top: 5rem !important
+        .auth-form
 
-        &__buttons-group
-            width: 100%
-            justify-content: space-between
+            &__buttons-group
+                width: 100%
+                justify-content: space-between
 
-            .toggler
-                padding: 0
-                justify-content: center
-                width: calc(50% - 1rem)
+                .toggler
+                    padding: .625rem 1rem
+                    justify-content: center
+                    width: 50%
 
-                &>span
-                    display: none
+                    &>span
+                        display: none
+            
+            .log-in, .sign-up
+
+                &__input
+                    padding: .625rem 0
+        
+        .home
+
+            &__subtitle
+                font-size: 1rem
+
+            &__title
+                font-size: 4.5rem 
+            
+            &__image
+                display: none
