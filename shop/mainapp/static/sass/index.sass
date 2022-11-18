@@ -5,15 +5,22 @@ $dangerous-color: #ff5290
 @mixin transition($time)
     -webkit-transition: all $time
     -moz-transition: all $time
-    -ms-transition: all $time
-    -o-transition: all $time
     transition: all $time
+
+@mixin translate($value)
+    -webkit-transform: translateX($value)
+    -moz-transform: translateX($value)
+    transform: translateX($value)
 
 *
     margin: 0
     padding: 0
     box-sizing: border-box
     font-family: "Mazzard M", sans-serif
+
+    &::-moz-selection, &::selection
+        color: #fff
+        background: $primary-color
 
 html
     width: 100%
@@ -40,8 +47,10 @@ body
 
 .wrap
     width: 100%
+    min-width: 20rem
     max-width: 71.25rem
     margin: 0 auto
+    padding: 0 1rem
 
 button, a
     cursor: pointer
@@ -50,14 +59,16 @@ button, a
 main
     flex: 1 0 auto
     padding: 2rem 0
+    position: relative
 
 footer
     flex: 0 0 auto
 
 @import "../fonts/Mazzart/stylesheet.css"
 @import "_header.sass"
+@import "_footer.sass"
 @import "_auth.sass"
 @import "_shadows.sass"
-@import "_footer.sass"
+@import "_home.sass"
 
 @import "_adaptive.sass"

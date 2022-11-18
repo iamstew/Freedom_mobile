@@ -4,7 +4,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" type="text/css" href="{%static 'css/index.css'%}"}>
+	<link rel="stylesheet" type="text/css" href="{%static 'css/index.css'%}">
 	<script src="https://kit.fontawesome.com/060207939c.js" crossorigin="anonymous"></script>
 	<title>Авторизация</title>
 </head>
@@ -12,10 +12,11 @@
 	<div class="shadow-top-left"></div>
 	<div class="shadow-bottom"></div>
 	<header>
-		<nav class="navigation row">
+		<nav class="navigation wrap row">
 			<a href="home.html" class="navigation__logo row">
-				<img src="assets/img/freedom-mobile-low-resolution-logo-color-on-transparent-background.png" alt="Логотип" class="navigation__logo-large">
-			</a>
+                <img src="{%static 'img/logo-large.svg'%}" alt="Freedom Mobile"  class="navigation__logo-large">
+                <img src="{%static 'img/logo-large.svg'%}" alt="Freedom Mobile"  class="navigation__logo-small">
+            </a>
 			<div class="navigation__menu row">
 				<a href="#" class="navigation__menu-link row"><i class="fa-solid fa-store"></i><p>Каталог</p></a>
 				<a href="#" class="navigation__menu-link row"><i class="fa-solid fa-cart-shopping"></i><p>Корзина</p></a>
@@ -24,10 +25,94 @@
 			</div>
 		</nav>
 	</header>
-	<main class="auth-form column w-100">
-		
+	<main>
+		<div class="home wrap row w-100">
+			<div class="home__block-info column">
+				<h4 class="home__subtitle">Лучший интернет магазин смартфонов</h4>
+				<h1 class="home__title">
+					<span class="typing"></span>
+					<span class="cursor"></span>
+				</h1>
+				<p class="home__text">Здесь вы сможете найти все популярные модели смартфонов, по выгодной цене.<br>Не верите? Убедитесь сами!</p>
+				<button class="home__go-shopping">Перейти к покупкам</button>
+            </div>
+            <img src="{ % static 'img/top-iphone.webp'%}" class="home__image">
+		</div>
 	</main>
-	<footer></footer>
-	<script type="text/javascript" src="assets/js/main.js"></script>
+	<footer class="column">
+		<div class="wrap row">
+			<div class="logo column">
+				    <img src="{ % static 'img/logo-large.svg'%}" class="logo__image">
+				<div class="payment row">
+					<span class="payment__service">
+						<i class="fa-brands fa-cc-visa"></i>
+					</span>
+					<span class="payment__service">
+						<i class="fa-brands fa-cc-mastercard"></i>
+					</span>
+					<span class="payment__service">
+						<i class="fa-brands fa-cc-paypal"></i>
+					</span>
+					<span class="payment__service">
+						<i class="fa-brands fa-alipay"></i>
+					</span>
+				</div>
+			</div>
+			<div class="follow-us column">
+				<h2 class="follow-us__title">Отслеживать нас</h2>
+				<div class="follow-us__socials row">
+					<a href="#" class="follow-us__link brand column">
+						<i class="fa-brands fa-telegram"></i>
+					</a>
+					<a href="#" class="follow-us__link brand column">
+						<i class="fa-brands fa-instagram"></i>
+					</a>
+					<a href="#" class="follow-us__link brand column">
+						<i class="fa-brands fa-youtube"></i>
+					</a>
+					<a href="#" class="follow-us__link brand column">
+						<i class="fa-brands fa-vk"></i>
+					</a>
+				</div>
+			</div>
+			<div class="contacts column">
+				<h2 class="contacts__title">Связаться с нами</h2>
+				<span class="contacts__phone row">
+					<i class="fa-solid fa-phone"></i>
+					<a href="tel:+79099099900" class="contacts__link">
+						+7 (909) 909-99-00
+					</a>
+				</span>
+				<span class="contacts__email row">
+					<i class="fa-solid fa-at"></i>
+					<a href="mailto:support@FreedomMobile.ru" class="contacts__link">
+						support@FreedomMobile.ru
+					</a>
+				</span>
+			</div>
+			<div class="partners column">
+				<h2 class="partners__title">Наши партнёры</h2>
+				<div class="partners__list row">
+					<a href="#" class="partners__link brand column">
+						<i class="fa-brands fa-yandex-international"></i>
+					</a>
+					<a href="#" class="partners__link brand column">
+						<i class="fa-brands fa-google"></i>
+					</a>
+					<a href="#" class="partners__link brand column">
+						<i class="fa-brands fa-github"></i>
+					</a>
+					<a href="#" class="partners__link brand column">
+						<i class="fa-brands fa-microsoft"></i>
+					</a>
+				</div>
+			</div>
+		</div>
+		<div class="rights-reserved">
+			<p class="rights-reserved__text">Все права защищены © Freedom Mobile</p>
+		</div>
+	</footer>
+    <script type="text/javascript" src="{ % static '/js/main.js'%}"></script>
+	<script type="text/javascript" src="{ % static '/js/typing.js'%}"></script>
 </body>
 </html>
