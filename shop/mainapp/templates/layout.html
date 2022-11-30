@@ -1,15 +1,14 @@
 <!DOCTYPE html>
-<!-- {% load static%} -->
+<!-- {%load static%} -->
 <html lang="en">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" type="text/css" href="{%static css/index.css'%}">
+  <!-- <link rel="stylesheet" type="text/css" href="{% static 'css/index.css'%}"> -->
   <link rel="stylesheet" type="text/css" href="../static/css/index.css">
   <script src="https://kit.fontawesome.com/060207939c.js" crossorigin="anonymous"></script>
-  <link rel="shortcut icon" href="../static/img/logo-head.png" type="image/png">
-  <title>Freedom Mobile</title>
+  <title>Авторизация</title>
 </head>
 
 <body>
@@ -18,8 +17,6 @@
   <header>
     <nav class="navigation wrap row">
       <a href="home.html" class="navigation__logo row">
-        <!-- <img src="{%static 'img/logo-large.svg'%}" alt="Freedom Mobile"  class="navigation__logo-large"> -->
-        <!-- <img src="{%static 'img/logo-small.svg'%}" alt="Freedom Mobile"  class="navigation__logo-small"> -->
         <img src="../static/img/logo-large.svg" alt="Freedom Mobile" class="navigation__logo-large">
         <img src="../static/img/logo-small.svg" alt="Freedom Mobile" class="navigation__logo-small">
       </a>
@@ -40,23 +37,13 @@
     </nav>
   </header>
   <main>
-    <div class="home wrap row w-100">
-      <div class="home__block-info column">
-        <h4 class="home__subtitle">Мы обеспечиваем качество, на которое вы рассчитываете</h4>
-        <h1 class="home__title">
-          <span class="typing"></span>
-        </h1>
-        <!-- <p class="home__text">Здесь вы сможете найти все популярные модели смартфонов, по выгодной цене.<br>Не верите? Убедитесь сами!</p> -->
-        <button class="home__go-shopping">Перейти к покупкам</button>
-      </div>
-      <!-- <img src="{ % static 'img/top-iphone.webp'%}" class="home__image"> -->
-      <img src="../static/img/top-iphone.webp" class="home__image">
+    <div class="catalog wrap">
+
     </div>
   </main>
   <footer class="column">
     <div class="wrap row">
       <div class="logo column">
-        <!-- <img src="{ % static 'img/logo-large.svg'%}" class="logo__image"> -->
         <img src="../static/img/logo-large.svg" class="logo__image">
         <div class="payment row">
           <span class="payment__service">
@@ -100,7 +87,7 @@
         </span>
         <span class="contacts__email row">
           <i class="fa-solid fa-at"></i>
-          <a href="mailto:support@FreedomMobile.ru" class="contacts__link">
+          <a href="#" class="contacts__link">
             support@FreedomMobile.ru
           </a>
         </span>
@@ -127,10 +114,8 @@
       <p class="rights-reserved__text">Все права защищены © Freedom Mobile</p>
     </div>
   </footer>
-  <!-- <script type="text/javascript" src="{ % static '/js/main.js'%}"></script> -->
-  <!-- <script type="text/javascript" src="{ % static '/js/typing.js'%}"></script> -->
-  <script type="text/javascript" src="../static/js/typing.js"></script>
-  <script type="text/javascript" src="../static/js/header.js"></script>
+  <script type="text/javascript" src="../static/js/main.js"></script>
+  <script type="text/javascript" src="../static/js/submit.js"></script>
 </body>
 
 </html>

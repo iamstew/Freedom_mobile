@@ -1,11 +1,13 @@
 <!DOCTYPE html>
-{%load static%}
+<!-- {%load static%} -->
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" type="text/css" href="{% static 'css/index.css'%}">
+	<!-- <link rel="stylesheet" type="text/css" href="{% static 'css/index.css'%}"> -->
+	<link rel="stylesheet" type="text/css" href="../static/css/index.css">
 	<script src="https://kit.fontawesome.com/060207939c.js" crossorigin="anonymous"></script>
+	<link rel="shortcut icon" href="../static/img/logo-head.png" type="image/png">
 	<title>Авторизация</title>
 </head>
 <body>
@@ -18,7 +20,7 @@
 				<img src="../static/img/logo-small.svg" alt="Freedom Mobile"  class="navigation__logo-small">
 			</a>
 			<div class="navigation__menu row">
-				<a href="#" class="navigation__menu-link row"><i class="fa-solid fa-store"></i><p>Каталог</p></a>
+				<a href="catalog.html" class="navigation__menu-link row"><i class="fa-solid fa-store"></i><p>Каталог</p></a>
 				<a href="#" class="navigation__menu-link row"><i class="fa-solid fa-cart-shopping"></i><p>Корзина</p></a>
 				<a href="auth.html" class="navigation__menu-link row"><i class="fa-solid fa-circle-user"></i><p>Личный кабинет</p></a>
 				<a href="#" class="navigation__menu-link row exit"><i class="fa-solid fa-right-from-bracket"></i><p>Выход</p></a>
@@ -30,7 +32,7 @@
 			<div class="auth-form__buttons-group row">
 				<span class="active-thumb"></span>
 				<button class="log-in__toggle toggler row active" onclick="toggleForm(event)" data-button="log-in"><span>Авторизация</span><i class="fa-solid fa-right-to-bracket"></i></button>
-				<button class="sign-up__toggle toggler row" onclick="toggleForm(event)" data-button="sign-up"><i class="fa-solid fa-user-plus"></i><span>Регистрация</span></button>
+				<button class="sign-up__togglde toggler row" onclick="toggleForm(event)" data-button="sign-up"><i class="fa-solid fa-user-plus"></i><span>Регистрация</span></button>
 			</div>
 			<section class="auth-form__section row">
 				<div class="log-in active column">
@@ -139,7 +141,8 @@
 			<p class="rights-reserved__text">Все права защищены © Freedom Mobile</p>
 		</div>
 	</footer>
-	<script type="text/javascript" src="../static/js/main.js"></script>
+	<script type="text/javascript" src="../static/js/auth.js"></script>
 	<script type="text/javascript" src="../static/js/submit.js"></script>
+	<script type="text/javascript" src="../static/js/header.js"></script>
 </body>
 </html>

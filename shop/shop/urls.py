@@ -18,7 +18,7 @@ from django.urls import path
 import mainapp.views as mainapp
 
 urlpatterns = [
-    path('', mainapp.home),
-    path('auth.html', mainapp.auth),
+    path('home', mainapp.home),
+    path('auth', mainapp.auth),
     path('admin/', admin.site.urls),
 ]

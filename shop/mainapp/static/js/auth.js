@@ -1,8 +1,6 @@
-let logIn = document.querySelector(".log-in"),
+const logIn = document.querySelector(".log-in"),
 	signUp = document.querySelector(".sign-up"),
-	thumb = document.querySelector(".active-thumb"),
-	header = document.querySelector("header"),
-	lastY = document.body.getBoundingClientRect().y
+	thumb = document.querySelector(".active-thumb");
 
 function toggleForm(event){
 	let data = event.target.closest(".toggler").dataset.button;
@@ -17,9 +15,3 @@ function toggleForm(event){
 		thumb.classList.add("right")
 	}
 }
-
-document.addEventListener("scroll", (event) => {
-	if (lastY < document.body.getBoundingClientRect().y){
-		console.log(document.body.getBoundingClientRect().y)
-	}
-})
