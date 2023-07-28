@@ -1,0 +1,69 @@
+header
+    padding: 2rem 0
+    width: 100%
+    transition: all .3s
+
+    .navigation
+        justify-content: space-between
+        align-items: center
+
+        &__logo
+            &-large
+                width: 12rem
+                display: block
+            &-small
+                width: 1.625rem
+                display: none
+
+        &__menu
+            gap: 1rem
+            &-link
+                display: flex
+                flex-direction: column
+                align-items: center
+                color: #f1f1f1
+                padding: .625rem 1rem
+                border: none
+                border-radius: 2rem
+                font-size: 1.125rem
+                position: relative
+
+                &::before
+                    @include transition(.3s)
+                    content: ""
+                    position: absolute
+                    top: 50%
+                    left: 50%
+                    transform: translate(-50%, -50%)
+                    width: .0020px
+                    height: .0020px
+                    box-shadow: 0 0 50px 15px $primary-color
+                    opacity: 0
+
+                p
+                    position: absolute
+                    top: 85%
+                    @include transition(.3s)
+                    margin-left: .375rem
+                    vertical-align: text-bottom
+                    opacity: 0
+
+                i
+                    @include transition(.3s)
+                    font-size: 1.125rem
+                    
+                &:hover
+                    // background: rgba(255, 255, 255, 0.08)
+                    // box-shadow: 0 0 10px $primary-color
+                    // text-shadow: 0 0 8px $primary-color
+                    // i
+                        // transform: translateY(-5px)
+                    p
+                        transform: translateY(5px)
+                        opacity: 1
+                    
+                    &::before
+                        opacity: 1
+
+                &.exit:hover
+                    color: $dangerous-color

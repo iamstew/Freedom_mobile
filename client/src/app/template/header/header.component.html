@@ -1,0 +1,31 @@
+
+<header [ngClass]="{'hide': hideHeader}">
+  <nav class="navigation wrap row">
+    <a routerLink="/" routerLinkActive="active" class="navigation__logo row">
+      <img src="./assets/images/logo-large.svg" alt="Freedom Mobile" class="navigation__logo-large">
+      <img src="./assets/images/logo-small.svg" alt="Freedom Mobile" class="navigation__logo-small">
+    </a>
+    <div class="navigation__menu row">
+      <a routerLink="/catalog" routerLinkActive="active" class="navigation__menu-link row">
+        <i class="fa-solid fa-list"></i>
+        <p>Каталог</p>
+      </a>
+      <a routerLink="/cart" class="navigation__menu-link row">
+        <i class="fa-solid fa-basket-shopping"></i>
+        <p>Корзина</p>
+      </a>
+      <a routerLink="/orders" class="navigation__menu-link row">
+        <i class="fa-solid fa-truck"></i>
+        <p>Заказы</p>
+      </a>
+      <a routerLink="/auth" routerLinkActive="active" class="navigation__menu-link row">
+        <i class="fa-solid fa-user-large"></i>
+        <p>Профиль</p>
+      </a>
+      <!-- <a routerLink="/" class="navigation__menu-link row exit">
+        <i class="fa-solid fa-right-from-bracket"></i>
+        <p>Выход</p>
+      </a> -->
+    </div>
+  </nav>
+</header>

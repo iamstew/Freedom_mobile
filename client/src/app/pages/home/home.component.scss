@@ -1,0 +1,179 @@
+@import 'mixins.scss';
+
+.home {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    height: 25rem;
+    color: #fff;
+    justify-content: space-between;
+
+    &::before {
+        width: .625rem;
+        height: .625rem;
+        position: absolute;
+        opacity: .8;
+        top: -15%;
+        left: -15%;
+        content: url(../../../assets/images/Ellipse_29.svg);
+    }
+
+    &::after {
+        position: absolute;
+        opacity: .8;
+        top: -5%;
+        left: -5%;
+        content: url(../../../assets/images/Ellipse_13.svg);
+    }
+
+    &__block {
+        &-info {
+            position: relative;
+            justify-content: space-around;
+
+            &::before {
+                width: 3.25rem;
+                height: 3.25rem;
+                position: absolute;
+                opacity: .8;
+                top: 5rem;
+                left: -5rem;
+                content: url(../../../assets/images/Vector_14.svg);
+            }
+        }
+    }
+
+    &__subtitle {
+        font-size: 1.25rem;
+    }
+
+    &__title {
+        z-index: 3;
+        position: relative;
+        font-size: 5rem;
+        min-height: 5.938rem;
+        margin: 1rem auto 0 0;
+        display: inline;
+        word-wrap: break-word;
+
+        &::before {
+            position: absolute;
+            top: -1.75rem;
+            left: -4rem;
+            z-index: -1;
+            content: url(../../../assets/images/Vector.svg);
+        }
+    }
+
+    &__go-shopping {
+        width: 13rem;
+        height: 3.125rem;
+        padding: .625rem 1rem;
+        outline: none;
+        border: none;
+        border-radius: 3.75rem;
+        background: $primary-gradient;
+        color: #fff;
+        font-size: 1rem;
+        line-height: .9rem;
+    }
+
+    &__image {
+        position: absolute;
+        z-index: -1;
+        right: 0;
+        margin-right: 2rem;
+        overflow: hidden;
+        align-self: center;
+    }
+}
+
+.typing::after {
+    animation: blink 1.5s infinite;
+    padding: 0 .15rem;
+    content: "";
+    background: $primary-color;
+}
+.shadow-top-left {
+    position: absolute;
+    width: 20rem;
+    height: 20rem;
+    top: -35rem;
+    left: -35rem;
+    z-index: 100;
+    border-radius: 50%;
+    box-shadow: 20rem 20rem 30rem $primary-color;
+}
+
+.shadow-bottom {
+    position: fixed;
+    width: 100vh;
+    height: 100vh;
+    top: 0;
+    right: -100vh;
+    border-radius: 50%;
+    z-index: 100;
+    box-shadow: -1vw 0 25rem $primary-color;
+}
+
+.main {
+    &::before {
+        width: .625rem;
+        height: .625rem;
+        position: absolute;
+        opacity: .8;
+        top: -15%;
+        left: -15%;
+        content: url(../../../assets/images/Ellipse_29.svg);
+    }
+
+    &::after {
+        position: absolute;
+        opacity: .8;
+        top: -5%;
+        right: -5%;
+        content: url(../../../assets/images/Ellipse_13.svg);
+    }
+}
+
+@keyframes blink {
+    0%, 25%, 100%{
+        background: $primary-color;
+    }
+    50% {
+        background: transparent;
+    }
+}
+
+@media (max-width: 768px) {
+    .home {
+        &__image {
+            display: none;
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .home {
+        &__subtitle {
+            font-size: 1rem;
+        }
+
+        &__title {
+            font-size: 3rem;
+        }
+
+        &__image {
+            display: none;
+        }
+        &__go-shopping{
+            padding: .5rem .75rem;
+            height: 2.75rem;
+            font-size: 1rem;
+        }
+    }
+    .shadow-top-left,
+    .shadow-bottom {
+        display: none;
+    }
+}

@@ -1,0 +1,198 @@
+@import 'mixins.scss';
+
+// main {
+    .auth-form {
+        align-items: center;
+        overflow: hidden;
+        gap: 2rem;
+        .active-thumb {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 50%;
+            height: 100%;
+            padding: .625rem 1rem;
+            border-radius: 3.75rem 0 0 3.75rem;
+            background: $primary-gradient;
+            transition: all .3s;
+            z-index: 2;
+
+            &.right {
+                transform: translateX(100%);
+                border-radius: 0 3.75rem 3.75rem 0;
+            }
+        }
+
+        &__buttons-group {
+            position: relative;
+            border-radius: 3.75rem;
+            justify-self: center;
+            background: transparent;
+            border: .0625rem solid $primary-color;
+
+            .toggler {
+                width: 13rem;
+                justify-content: space-between;
+                align-items: center;
+                padding: 1.25rem 2rem;
+                background: transparent;
+                color: #fff;
+                font-size: 1.125rem;
+                border: none;
+                @include transition(.3s);
+                z-index: 10;
+
+                &>span {
+                    line-height: 1.125rem;
+                    font-weight: 600;
+                }
+            }
+        }
+
+        &__section {
+            position: relative;
+            @include transition(1s);
+            justify-content: center;
+            // анимация карточки
+            width: 26rem;
+            height: 26rem;
+            perspective: 42rem;
+        }
+
+        &__line {
+            padding: 0 .0625rem;
+            background: $primary-color;
+            z-index: 10;
+        }
+
+        // анимация с пролистыванием
+        // .log-in {
+        //     opacity: 0;
+        //     // left: -100%;
+
+        //     &__toggle {
+        //         border-radius: 3.75rem 0 0 3.75rem;
+        //     }
+
+        //     &.active {
+        //         opacity: 1;
+        //         // left: 25%;
+        //     }
+        // }
+
+        // .sign-up {
+        //     opacity: 0;
+        //     // right: -100%;
+
+        //     &__toggle {
+        //         border-radius: 0 3.75rem 3.75rem 0;
+        //     }
+
+        //     &.active {
+        //         opacity: 1;
+        //         // right: 25%;
+        //     }
+        // }
+
+        // анимация карточки
+        .sign-up {
+            transform: rotateY(180deg);
+
+            &.active {
+                transform: rotateY(0deg);
+            }
+        }
+
+        .log-in {
+            transform: rotateY(180deg);
+
+            &.active {
+                transform: rotateY(360deg);
+            }
+
+        }
+        .submit {
+            background-image: $primary-gradient;
+            color: #fff;
+            border: .0625rem solid $primary-color;
+            outline: none;
+            font-size: 1.125rem;
+            height: 3rem;
+            @include transition(.3s);
+        }
+
+        .log-in, .sign-up {
+            @include transition(.5s);
+            width: 100%;
+            height: 100%;
+
+            //для анимации с пролистыванием
+            // position: relative;
+
+            //для анимации карточки
+            position: absolute;
+            display: flex;
+            align-items: center;
+            backface-visibility: hidden;
+            // background:rgba(255, 255, 255, 0.08);
+            border-radius: 1rem;
+            
+            &__field, &__submit {
+                margin-top: 1rem;
+                border-radius: 3.75rem;
+                width: 18rem;
+                font-size: 1.125rem;
+            }
+            
+            &__field {
+                background: #fff;
+                align-items: center;
+                color: #0000006f;
+                padding: 0 1rem;
+                
+                // &.invalid {
+                //     animation: shake .5s;
+                    
+                //     &>* {
+                //         color: #b30000;
+                //     }
+                // }
+            }
+            
+            &__input {
+                color: #000;
+                width: 14.125rem;
+                margin-left: .5rem;
+                outline: none;
+                border: none;
+                font-size: 1rem;
+                padding: .875rem 0;
+            }
+        }
+    }
+// }
+@media (max-width: 480px) {
+    .auth-form {
+        &__buttons-group {
+            width: 100%;
+            justify-content: space-between;
+
+            .toggler {
+                padding: .625rem 1rem;
+                justify-content: center;
+                width: 50%;
+
+                & > span {
+                    display: none;
+                }
+            }
+        }
+
+        .log-in,
+        .sign-up {
+            &__input {
+                // padding: .625rem 0;
+            }
+        }
+    }
+}

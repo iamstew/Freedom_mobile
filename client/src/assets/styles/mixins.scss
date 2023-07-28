@@ -1,0 +1,21 @@
+$primary-color: #5470f0;
+$primary-gradient: linear-gradient(122.93deg, #7345D3 -137.34%, #5470F0 38.32%, #1858CD 129.02%);
+$dangerous-color: #ff5290;
+
+@mixin transition($time){
+    -webkit-transition: all $time;
+    -moz-transition: all $time;
+    transition: all $time;
+}
+@mixin translate($value){
+    -webkit-transform: translateX($value);
+    -moz-transform: translateX($value);
+    transform: translateX($value);
+}
+
+@mixin text-gradient(){
+    cursor: default;
+    background: -webkit-linear-gradient(75deg, $primary-color 10%, rgb(120, 135, 255) 30%, rgb(220, 133, 246) 60%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: rgba(255,255,255 , 0);
+}

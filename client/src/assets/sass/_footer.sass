@@ -1,0 +1,74 @@
+footer
+    color: #fff
+
+    .wrap
+        flex-wrap: wrap
+        justify-content: space-between
+        padding-top: 4rem
+        padding-bottom: 4rem
+        gap: 4rem
+
+        .logo
+            &__image
+                width: 10rem
+                margin-bottom: 2rem
+        
+        .payment
+            justify-content: space-between
+
+            &__service
+                font-size: 2rem
+                text-shadow: 0 0 5px $primary-color
+
+        .follow-us, .contacts, .partners
+            &__title
+                margin-bottom: 2rem 
+
+            &__link
+                color: $primary-color
+                font-size: 1.25rem
+        
+        .contacts
+            &__phone, &__email
+                color: $primary-color
+                font-size: 1.25rem
+
+            &__link
+                color: #fff
+                font-size: 1.125rem
+                margin-left: 1rem
+                margin-bottom: 1rem
+                background-image: $primary-gradient
+                background-repeat: no-repeat
+                background-position: 0 100%
+                background-size: 0% .125rem
+                transition: background-size .3s ease-in
+
+                &:hover
+                    background-position: 0% 100%
+                    background-size: 100% .125rem
+
+    .rights-reserved
+        left: 0
+        bottom: 0
+        width: 100%
+        padding: 1rem 0
+        background: #06001D
+
+        &__text
+            text-align: center
+    
+    .brand
+        align-items: center
+        justify-content: center
+        width: 2.938rem
+        height: 2.938rem
+        border-radius: 50%
+        background: rgba(255, 255, 255, 0.08)
+        @include transition(.4s)
+
+        &:not(:last-child)
+            margin-right: 1.25rem
+        
+        &:hover
+            box-shadow: 0 0 10px $primary-color

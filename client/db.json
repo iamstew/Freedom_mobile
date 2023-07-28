@@ -1,0 +1,80 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "OnePlus 10 Pro",
+      "price": 39690,
+      "imageUrl": "assets/images/OnePlus10Pro.webp",
+      "configure": {
+        "screen": "6.7\" (3216x1440) AMOLED 120 Гц",
+        "photo": "3 камеры, основная 48 МП",
+        "battery": "5000 мА·ч",
+        "cpu": "Qualcomm Snapdragon 8 Gen 1"
+      }
+    },
+    {
+      "id": 2,
+      "name": "Realme GT Master Edition",
+      "price": 17970,
+      "imageUrl": "assets/images/RealmeGT.webp",
+      "configure": {
+        "screen": "6.43\" (2400x1080) Super AMOLED 120 Гц",
+        "photo": "3 камеры, основная 64 МП",
+        "battery": "4300 мА·ч",
+        "cpu": "Qualcomm Snapdragon 778G 5G"
+      }
+    },
+    {
+      "id": 3,
+      "name": "Apple iPhone 12 Pro Max",
+      "price": 78800,
+      "imageUrl": "assets/images/Iphone12ProMax.webp",
+      "configure": {
+        "screen": "6.7\" (2778x1284) OLED 60 Гц",
+        "photo": "3 камеры, основная 12 МП",
+        "battery": "3687 мА·ч",
+        "cpu": "Apple A14 Bionic"
+      }
+    },
+    {
+      "id": 4,
+      "name": "Nothing Phone (1)",
+      "price": 33210,
+      "imageUrl": "assets/images/NothingPhone1.jpg",
+      "configure": {
+        "screen": "6.55\" (2400x1080) OLED 120 Гц",
+        "photo": "двойная камера, основная 50 МП",
+        "battery": "4500 мА·ч",
+        "cpu": "Qualcomm Snapdragon 778G Plus"
+      }
+    }
+  ],
+  "cart": [
+    {
+      "id": 1,
+      "name": "OnePlus 10 Pro",
+      "price": 39690,
+      "imageUrl": "assets/images/OnePlus10Pro.webp",
+      "configure": {
+        "screen": "6.7\" (3216x1440) AMOLED 120 Гц",
+        "photo": "3 камеры, основная 48 МП",
+        "battery": "5000 мА·ч",
+        "cpu": "Qualcomm Snapdragon 8 Gen 1"
+      },
+      "amount": 1
+    },
+    {
+      "id": 4,
+      "name": "Nothing Phone (1)",
+      "price": 33210,
+      "imageUrl": "assets/images/NothingPhone1.jpg",
+      "configure": {
+        "screen": "6.55\" (2400x1080) OLED 120 Гц",
+        "photo": "двойная камера, основная 50 МП",
+        "battery": "4500 мА·ч",
+        "cpu": "Qualcomm Snapdragon 778G Plus"
+      },
+      "amount": 3
+    }
+  ]
+}

@@ -1,0 +1,187 @@
+@import 'mixins.scss';
+
+.catalog {
+    .card {
+        overflow: hidden;
+        color: #fff;
+        justify-content: space-between;
+        border-radius: 1rem;
+        background: linear-gradient(45deg, #1b1733 0%, #070422 100%);
+        
+        &:not(:last-child) {
+            margin-bottom: 2rem;
+        }
+        
+        &__image {
+            flex-shrink: 1;
+            max-width: 12.5rem;
+            max-height: 12.5rem;
+            margin-right: 1rem;
+            
+            img {
+                border-radius: 1rem;
+                width: 100%;
+                height: 100%;
+            }
+        }
+        
+        &__info {
+            flex-grow: 1;
+            justify-content: space-between;
+        }
+
+        &__item {
+            align-items: baseline;
+            border-radius: 1rem 1rem 0 0;
+            padding: 1rem 0;
+            padding-left: 0;
+            @include transition(.3s);
+
+            &-name {
+                @include text-gradient();
+                &:hover{
+                    cursor: pointer;
+                }
+            }
+
+            &__prop {
+                list-style: none;
+                padding: .5rem 0 .5rem 1rem;
+                position: relative;
+
+                &-row {
+                    line-height: 1.5rem;
+                    position: relative;
+
+                    &::before {
+                        left: -1rem;
+                        top: .5rem;
+                        width: .5rem;
+                        height: .5rem;
+                        position: absolute;
+                        content: "";
+                        background-image: url(../../../assets/images/list_point.svg);
+                    }
+                }
+
+                &-name {
+                    @include text-gradient();
+                }
+            }
+        }
+
+        &__action {
+            padding: 1rem;
+            justify-content: space-between;
+
+            &-title {
+                @include text-gradient();
+            }
+
+            &-price {
+                font-size: 2rem;
+            }
+
+            &-button {
+                width: 9rem;
+                font-size: 1.125rem;
+                font-weight: 500;
+                padding: .5rem;
+                color: inherit;
+                background: $primary-gradient;
+                outline: none;
+                border: none;
+                border-radius: 3.75rem;
+                @include transition(.1s);
+
+                &:active {
+                    transform: scale(.97);
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 768px){
+    .catalog {
+        .card {
+            &__image {
+                max-width: 10rem;
+                max-height: 10rem;
+            }
+
+            &__info {
+                flex-direction: column;
+            }
+
+            &__item {
+                padding: .75rem .75rem 0 0;
+                
+                &__prop {
+                    &-row {
+                        line-height: 1rem;
+                        font-size: .8rem;
+                        
+                        &::before {
+                            top: .1rem;
+                        }
+                    }
+                }
+
+            }
+            &__action {
+                align-items: center;
+                flex-direction: row;
+                padding: 0 .75rem .75rem 0;
+
+                &-price {
+                    font-size: 1.5rem;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .catalog {
+        .card {
+            &:not(:last-child) {
+                margin-bottom: .5rem;
+            }
+
+            &__image {
+                max-width: 6rem;
+                max-height: 6rem;
+            }
+
+            &__item {
+                padding: .5rem .5rem 0 0;
+
+                &-name {
+                    font-size: .8rem;
+                }
+
+                &__prop {
+                    display: none;
+                }
+            }
+
+            &__action {
+                padding: 0 .5rem .5rem 0;
+
+                &-title {
+                    font-size: .625rem;
+                }
+
+                &-price {
+                    font-size: 1rem;
+                }
+
+                &-button {
+                    width: 5.5rem;
+                    font-size: .8rem;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,45 @@
+
+<div class="auth-form wrap column w-100">
+  <div class="auth-form__buttons-group row">
+    <span [ngClass]="{'active-thumb':true, 'right':!logIn}"></span>
+    <button (click)="setLogIn(true)" class="log-in__toggle toggler row"><span>Авторизация</span><i class="fa-solid fa-right-to-bracket"></i></button>
+    <button (click)="setLogIn(false)" class="sign-up__toggle toggler row"><i class="fa-solid fa-user-plus"></i><span>Регистрация</span></button>
+  </div>
+  <div *ngIg="false" class="auth-form__error">Неверно указана почта или пароль</div>
+  <section class="auth-form__section row">
+
+    <div [ngClass]="{'log-in':true, 'active':logIn, 'column':true}">
+      <label class="log-in__field row">
+        <i class="fa-solid fa-envelope"></i>
+        <input type="email" placeholder="Почта" required class="log-in__input">
+      </label>
+      <label class="log-in__field row">
+        <i class="fa-solid fa-key"></i>
+        <input type="password" placeholder="Пароль" required class="log-in__input">
+
+      </label>
+      <button class="log-in__submit submit" type="submit" data-auth="log-in" onclick="submit(event)">Войти</button>
+    </div>
+    
+    <div [ngClass]="{'sign-up':true, 'active':!logIn, 'column':true}">
+      <label class="sign-up__field row">
+        <i class="fa-solid fa-user"></i>
+        <input type="text" placeholder="Имя" required class="sign-up__input">
+      </label>
+      <label class="sign-up__field row">
+        <i class="fa-solid fa-phone"></i>
+        <input matInput prefix="+7 " mask="(000) 000-00-00" type="text" placeholder="Телефон" required class="sign-up__input">
+      </label>
+      <label class="sign-up__field row">
+        <i class="fa-solid fa-envelope"></i>
+        <input type="email" placeholder="Почта" required class="sign-up__input">
+      </label>
+      <label class="sign-up__field row">
+        <i class="fa-solid fa-key"></i>
+        <input type="password" placeholder="Пароль" required class="sign-up__input">
+      </label>
+      <button class="sign-up__submit submit" type="submit" data-auth="sign-up" onclick="submit(event)">Зарегестрироваться</button>
+    </div>
+    
+  </section>
+</div>

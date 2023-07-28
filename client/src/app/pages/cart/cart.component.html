@@ -1,0 +1,68 @@
+<div class="cart wrap row w-100">
+
+  <section *ngIf="cart.length" class="list column">
+    <a style="height: 51px; font-size: 1.125rem; font-weight: 700; color: #fff; gap: 10px; padding: 5px 10px; align-items: center;" href="#" class="select__all row">
+      <i class="fa-solid fa-check"></i>
+      <p>Выбрать все</p> 
+    </a>
+    <div [ngClass]="{'product': true, 'row': true, 'selected': select.classList.contains('active')}" *ngFor="let product of cart">
+      <img class="product__image" src={{product.imageUrl}}>
+      <div class="product__info column">
+        <div class="product__head row">
+          <h3 class="product__name">
+            {{product.name}}
+          </h3>
+          <h5 class="product__cost">
+            <span class="product__price">{{product.price}}</span>
+            <i class="fa-solid fa-ruble-sign"></i>
+          </h5>
+        </div>
+        <div class="product__footer row">
+          <div class="product__buttons-group row">
+            <a class="product__check" #select (click)="select.classList.toggle('active')">
+              <i class="fa-solid fa-check"></i>
+              <p class="product__buttons-text">Выбрать</p>
+            </a>
+            <a (click)="removeProduct(product)" class="product__remove" title="Удалить">
+              <i class="fa-solid fa-xmark"></i>
+              <p class="product__buttons-text">Удалить</p>
+            </a>
+          </div>
+          <div class="product__action row">
+            <span class="product__amount row">
+              <button (click)="decreaseProductAmount(product)" [disabled]="product.amount == 1" class="product__minus" title="Уменьшить"><i class="fa-solid fa-minus"></i></button>
+              <p class="product__counter">{{product.amount}}</p>
+              <button (click)="increaseProductAmount(product)" class="product__plus" title="Увеличить"><i class="fa-solid fa-plus"></i></button>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+
+  </section>
+
+  <section *ngIf="cart.length" class="total column">
+    <button class="total__buy">Перейти к оформлению</button>
+    <div class="total__card">
+      <span class="total__counter">
+        Выбрано: <span class="total__amount"> {{this.cart.length}} товар{{ ["2","3","4"].includes(cart.length.toString().split("").reverse()[0]) ? "а" : 
+          ["5","6","7","8","9","0"].includes(cart.length.toString().split("").reverse()[0]) ? "ов" : null}}</span>
+      </span>
+      <h2 class="total__title">
+        <span class="total__name">
+          Итого:
+        </span>
+        <span class="total__sum">{{this.total}}</span>
+        <i class="fa-solid fa-ruble-sign"></i>
+      </h2>
+    </div>
+  </section>
+
+  <section *ngIf="!cart.length" class="empty w-100">
+    <h1 class="empty__title">Товары можно найти в каталоге</h1>
+    <p class="empty__subtitle">Как что-то приглянется, возвращайтесь сюда</p>
+    <button routerLink="/catalog" class="empty__button">Перейти в каталог</button>
+  </section>
+
+</div>

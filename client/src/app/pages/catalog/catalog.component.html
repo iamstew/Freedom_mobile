@@ -1,0 +1,56 @@
+
+<div class="catalog wrap column">
+  <div class="card row" *ngFor="let product of catalog">
+    <div class="card__image column">
+      <img src={{product.imageUrl}}>
+    </div>
+    <div class="card__info row">
+      <div class="card__item column">
+        <h3 [routerLink]="['/product/', product.id]" class="card__item-name">
+          {{product.name}}
+        </h3>
+        <ul class="card__item__prop">
+          <li class="card__item__prop-row">
+            <span class="card__item__prop-name">
+              Экран:
+            </span>
+            <span class="card__item__prop-value">
+              {{product.configure.screen}}
+            </span>
+          </li>
+          <li class="card__item__prop-row">
+            <span class="card__item__prop-name">
+              Фото:
+            </span>
+            <span class="card__item__prop-value">
+              {{product.configure.photo}}
+            </span>
+          </li>
+          <li class="card__item__prop-row">
+            <span class="card__item__prop-name">
+              Аккумулятор:
+            </span>
+            <span class="card__item__prop-value">
+              {{product.configure.battery}}
+            </span>
+          </li>
+          <li class="card__item__prop-row">
+            <span class="card__item__prop-name">
+              Процессор:
+            </span>
+            <span class="card__item__prop-value">
+              {{product.configure.cpu}}
+            </span>
+          </li>
+        </ul>
+      </div>
+      <div class="card__action column">
+        <h4 class="card__action-title">
+          <span class="card__action-price">{{product.price}}</span>
+          <i class="fa-solid fa-ruble-sign"></i>
+        </h4>
+        <button class="card__action-button" (click)="addToCart(product)">В корзину</button>
+      </div>
+    </div>
+  </div>
+</div>

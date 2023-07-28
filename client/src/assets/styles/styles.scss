@@ -1,0 +1,110 @@
+@import 'mixins.scss';
+@import "../fonts/Mazzart/stylesheet.css";
+
+app-root {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Mazzard M", sans-serif;
+
+    &::-moz-selection,
+    &::selection {
+        color: rgba(255, 255, 255, 255) !important;
+        background: $primary-color;
+    }
+}
+
+html {
+    width: 100%;
+    height: 100%;
+    background-color: #040123;
+}
+
+body {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+
+    &::-webkit-scrollbar {
+        width: .25rem;
+    }
+
+    &::-webkit-scrollbar-track {
+        background: transparent;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: $primary-gradient;
+        border-radius: .25rem;
+    }
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+}
+
+.w-100 {
+    width: 100%;
+}
+
+.wrap {
+    width: 100%;
+    min-width: 20rem;
+    max-width: 71.25rem;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+button,
+a {
+    cursor: pointer;
+    text-decoration: none;
+}
+
+main {
+    flex: 1 0 auto;
+    padding: 2rem 0;
+    position: relative;
+    color: #fff;
+}
+
+footer {
+    flex: 0 0 auto;
+}
+
+.cursor{
+    box-shadow: 1px 1px 40px 15px #5470f0;
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    width: .05px;
+    height: .05px;
+    z-index: 999;
+    pointer-events: none;
+    opacity: 1;
+    transition: opacity .7s ease-in-out;
+}
+
+@media (max-width: 480px) {
+    main {
+        height: 100%;
+        margin-top: 3rem !important;
+    }
+}
+

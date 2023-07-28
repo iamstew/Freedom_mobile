@@ -1,0 +1,56 @@
+<div class="product wrap w-100">
+  <div class="product__image">
+    <img class="w-100" src={{product.imageUrl}}>
+  </div>
+  <div class="product__info column">
+    <h3 class="product__name">{{product.name}}</h3>
+    <div class="product__action column">
+      <h4 class="product__action-title">
+        <span class="product__price">{{product.price}}</span>
+        <i class="fa-solid fa-ruble-sign"></i>
+      </h4>
+      <span *ngIf="product.amount" class="product__amount row">
+        <button (click)="null" [disabled]="product.amount == 1" class="product__minus" title="Уменьшить"><i class="fa-solid fa-minus"></i></button>
+        <p class="product__counter">{{product.amount}}</p>
+        <button (click)="null" class="product__plus" title="Увеличить"><i class="fa-solid fa-plus"></i></button>
+      </span>
+      <button *ngIf="!product.amount" (click)="addToCart(product)" class="product__action-button">В корзину</button>
+    </div>
+  </div>
+  <div class="product__configure">
+    <ul class="product__configure-list list">
+      <li class="list__item">
+        <span class="list__item-title">
+          Экран:
+        </span>
+        <span class="list__item-value">
+          {{product.configure.screen}}
+        </span>
+      </li>
+      <li class="list__item">
+        <span class="list__item-title">
+          Фото:
+        </span>
+        <span class="list__item-value">
+          {{product.configure.photo}}
+        </span>
+      </li>
+      <li class="list__item">
+        <span class="list__item-title">
+          Аккумулятор:
+        </span>
+        <span class="list__item-value">
+          {{product.configure.battery}}
+        </span>
+      </li>
+      <li class="list__item">
+        <span class="list__item-title">
+          Процессор:
+        </span>
+        <span class="list__item-value">
+          {{product.configure.cpu}}
+        </span>
+      </li>
+    </ul>
+  </div>
+</div>
